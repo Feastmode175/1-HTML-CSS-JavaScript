@@ -5,6 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dating Website</title>
+  <style>
+
+    body {
+      font-family: Verdana, Arial, sans-serif;
+      background: lavender;
+    }
+    
+    p {
+      margin: 0;
+    }
+
+    legend {
+      background: purple;
+      border-radius: 10px;
+      color: white;
+      padding: 12px;
+    }
+
+    fieldset {
+      background: lavender;
+      border: 10px solid darkblue;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      width: 720px;
+    }
+
+    div {
+      margin: 10px;
+    }
+
+    div:hover {
+      color: blue;
+    }
+
+    label {
+      display: inline-block;
+      text-align: right;
+      vertical-align: top;
+      width: 200px;
+    }
+
+    input[type=radio]+label, input[type=checkbox]+label {
+      width: auto;
+    }
+    
+    .range-caption {
+      background: darkcyan;
+      color: white;
+      padding: 6px;
+      text-align: center;
+    }
+
+    input[type=submit] {
+      background: darkcyan;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      padding: 12px;
+    }
+  </style>
 </head>
 <body>
   <h1>Enter Your Details For Our Dating Website</h1>
@@ -16,7 +76,7 @@
         <input type="file" id="avatar" name="avatar" required />
       </div>
       <p>
-        Image Preview: <img src="" id="previw" width="500">
+        Image Preview: <img src="" id="preview" width="500">
       </p>
     </fieldset>
     <fieldset>
@@ -88,5 +148,6 @@
       <input type="submit" value="Submit">
     </div>
   </form>
+  <script src="https://url.nucamp.co/datingjs"></script>
 </body>
 </html>
