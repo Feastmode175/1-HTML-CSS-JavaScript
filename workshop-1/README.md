@@ -5,7 +5,6 @@
 2 or more image files
 downloaded mp3 file
 
-
 ## Instructions
 
 ### Task 1
