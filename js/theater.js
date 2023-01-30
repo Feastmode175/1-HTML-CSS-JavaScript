@@ -11,3 +11,10 @@ function buyTicket () {
   }
   alert('Your ticket will cost: $' + cost +'.');
 }
+
+function getBaseTicketCost(age) {
+  if ((age<=12) || (age>=65)) {
+    return DISCOUNT_ADMISSION_COST
+  }
+  return GENERAL_ADMISSION_COST
+}
