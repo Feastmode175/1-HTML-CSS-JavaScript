@@ -7,11 +7,14 @@
   <title>JavaScript Hello World</title>
 </head>
 <body>
-  <button type="button" onclick="sayHello()" >Click Me</button>
+  <button type="button" onclick="getName()" >Click Me</button>
   <script>
-    function sayHello () {
+    function getName() {
       const userName = prompt('What is your name?');
-      alert('Hello ' + userName + '!');
+        sayHello(userName);
+    }
+    function sayHello (name) {
+      alert('Hello ' + name + '!');
     }
   </script>
 </body>
