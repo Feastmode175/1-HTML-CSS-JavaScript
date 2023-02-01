@@ -12,7 +12,10 @@ function runGame() {
   //const target = Math.floor(Math.random() *100) + 1;
   
   do {
-    guessString = prompt('I am thinking of a number in the range 1 to 100. \n\n')
+    guessString = prompt('I am thinking of a number in the range 1 to 100. \n\n');
+    if (guessString === null) {
+      return;
+    }
     guessNumber = +guessString;
     numTries += 1;
     correct = checkGuess(guessNumber, target);
