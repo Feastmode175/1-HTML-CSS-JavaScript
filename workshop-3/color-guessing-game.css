@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-image: url(https://img.playbuzz.com/image/upload/ar_1.5,c_crop/ar_100:53,c_crop/c_mfit,w_640/q_auto:good,f_auto,fl_lossy,w_480,c_limit,dpr_1/v1519690940/xnk73gi8c9hqhqn6tjsi.png);
+  font-family: cursive;
+  overflow: hidden;
+}
+
+div button {
+  width: 100%;
+  border-radius: 1px;
+  border-width: 2px;
+  font-size: 16px;
+  font-family: cursive;
+  background-color: rgba(125, 50, 180, 0.3);
+  padding: 5px;
+}
+
+div button:hover {
+  filter: opacity(0.7);
+  cursor: pointer;
+}
