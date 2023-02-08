@@ -4,17 +4,14 @@
     <meta charset="utf-8" />
     <title>Onmousedown & Onmouseup Demo</title>
 </head>
-<body>
-    <h1 onmousedown="changeBackground();" onmouseup="revertBackground()">Click Me</h1>
+<body id="test">
+    <h1 onmousedown="changeBackground('orange');" onmouseup="changeBackground('white')">Click Me</h1>
 
     <script>
-        const h1 = document.getElementsByTagName('h1')[0];
+        const bodyEl = document.querySelector('body');
 
-        function changeBackground() {
-            h1.style.background = 'orange';
-        }
-        function revertBackground() {
-            h1.style.background = 'white';
+        function changeBackground(color) {
+            bodyEl.firstElementChild.style.background = color;
         }
     </script>
 </body>
