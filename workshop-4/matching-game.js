@@ -1,6 +1,8 @@
 let numberOfFaces = 5;
 const leftSide = document.querySelector('#leftSide');
 
+window.addEventListener('load', generateFaces)
+
 function generateFaces () {
   for (i = 0; i < 5; i++) {
     let face = document.createElement('img');
