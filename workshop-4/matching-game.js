@@ -1,11 +1,12 @@
 let numberOfFaces = 5;
+let numTries = 0;
 const leftSide = document.querySelector('#leftSide');
 const rightSide = document.querySelector('#rightSide');
 
 window.addEventListener('load', generateFaces);
 
-function generateFaces () {
-  for (i = 0; i < 5; i++) {
+function generateFaces() {
+  for (i = 0; i < numberOfFaces; i++) {
     let face = document.createElement('img');
     face.src = '../images/smile.png';
     
@@ -22,6 +23,30 @@ function generateFaces () {
   leftSideImages.removeChild(leftSideImages.lastChild);
   rightSide.appendChild(leftSideImages);
 
-  
+  leftSide.lastChild.addEventListener('click', nextLevel);
+  document.body.addEventListener('click', gameOver);
 }
 
+
+function nextLevel(event) {
+  event.stopPropagation();
+  numberOfFaces += 5;
+  numTries++
+
+  while (leftSide.hasChildNodes()) {
+    leftSide.removeChild(leftSide.firstChild);
+  }
+  while (rightSide.hasChildNodes()) {
+    rightSide.removeChild(rightSide.firstChild);
+
+  }
+
+  generateFaces();
+}
+
+function gameOver () {
+  alert(`Game over! \n\n You made it through ${numTries} rounds!`)
+  
+  document.body.removeEventListener('click', gameOver);
+  leftSide.lastChild.addEventListener('click', nextLevel);
+}
