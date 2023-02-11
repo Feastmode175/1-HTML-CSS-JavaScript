@@ -1,7 +1,8 @@
 let numberOfFaces = 5;
 const leftSide = document.querySelector('#leftSide');
+const rightSide = document.querySelector('#rightSide');
 
-window.addEventListener('load', generateFaces)
+window.addEventListener('load', generateFaces);
 
 function generateFaces () {
   for (i = 0; i < 5; i++) {
@@ -16,4 +17,11 @@ function generateFaces () {
 
     leftSide.appendChild(face);
   }
+
+  const leftSideImages = leftSide.cloneNode(true);
+  leftSideImages.removeChild(leftSideImages.lastChild);
+  rightSide.appendChild(leftSideImages);
+
+  
 }
+
